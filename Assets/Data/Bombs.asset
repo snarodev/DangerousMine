@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83357d563a134454397b2df8e71f38b9, type: 3}
+  m_Name: Bombs
+  m_EditorClassIdentifier: 
+  displayName: Bombs
+  id: 3
+  maxDurability: 5
+  price: 20
+  damage: 30
+  rechargeTime: 1
+  sprite: {fileID: 21300000, guid: 14e4637f1c564f0419801a83275bd066, type: 3}
