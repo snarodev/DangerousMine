@@ -137,7 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  tileBreakEffect: {fileID: 7699415481431225190, guid: eb471894fe536b64891f136bd86eedb3, type: 3}
   explosionPrefab: {fileID: 5826904409732054176, guid: 666c5e3cbba597f4faafdb5a765858b5, type: 3}
+  droppedGoldPrefab: {fileID: 7925288036226334613, guid: 668dcd4f37a97b74dbb5d1b6aa900d16, type: 3}
 --- !u!82 &6813152443605694973
 AudioSource:
   m_ObjectHideFlags: 0
