@@ -11,7 +11,7 @@ public class PlayerController : Controller
     public float groundDrag;
     public float airControl = 0.2f;
     public Vector2 groundCheckOffset = new Vector2(0, -0.5f);
-
+    public Vector2 groundCheckSize = new Vector2(0.3f, 0.3f);
 
     bool onGround = false;
     
@@ -50,7 +50,7 @@ public class PlayerController : Controller
     {
         Vector2 force = new Vector2(horizontal * speed, 0);
 
-        Collider2D hit = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y) + groundCheckOffset, new Vector2(0.3f, 0.3f), 0);
+        Collider2D hit = Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y) + groundCheckOffset, groundCheckSize, 0);
 
         if (hit != null)
             onGround = true;
@@ -91,6 +91,6 @@ public class PlayerController : Controller
         else
             Gizmos.color = Color.blue;
 
-        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y) + groundCheckOffset, new Vector2(0.3f, 0.3f));
+        Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y) + groundCheckOffset, groundCheckSize);
     }
 }

@@ -26,7 +26,9 @@ public class Shop : MonoBehaviour
                 if (shopPanel == null)
                 {
                     if (UIController.ui.GetOpenPanelAmount() == 0)
+                    {
                         UIController.ui.OpenPanel<ShopPanel>(new ShopPanel.ShopPanelPanelOpenInfo(new int[3] { 1, 2, 3 }));
+                    }
                 }
                 else
                 {
@@ -39,6 +41,16 @@ public class Shop : MonoBehaviour
         }
         else
         {
+            if (Vector2.Distance(transform.position, player.position) < 10)
+            {
+                ShopPanel shopPanel = UIController.ui.GetTopPanel<ShopPanel>();
+                if (shopPanel != null)
+                {
+                    UIController.ui.CloseCurrentPanel();
+                }
+            }
+                
+            
             clickPrompt.SetActive(false);
         }
     }

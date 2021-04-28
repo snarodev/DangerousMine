@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            UIController.ui.CloseCurrentPanel();
             UIController.ui.OpenPanel<GameoverPanel>();
 
             dead = true;
